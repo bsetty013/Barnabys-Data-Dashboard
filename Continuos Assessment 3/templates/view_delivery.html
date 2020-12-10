@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body style="background-color:BlanchedAlmond ;">
+	<h1>Here are the amount of bottles ready for delivery for each beer: </h1>
+	<table>
+		<tr>
+			<th>Organic Red Helles</th>
+			<th>Organic Pilsner</th>
+			<th>Organic Dunkel</th>
+		</tr>
+
+		<tr>
+		{% for recipe_bottles in delivery_displays %}
+		<td>{{recipe_bottles}}</td>
+		{% endfor %}
+		</tr>
+	</table>
+
+
+</body>
+<form action = "/" method = "get">
+	<input type = "submit" class = "button" value = "Home" name = Home>
+</form>
+
+<style>
+table {
+	border-collapse:collapse;
+	width: 100%;
+}
+th {
+	height: 50px;
+	text-align: left;
+	background-color: #cde1ff;
+  	color: black;
+}
+table, th, td {
+	border: 1px solid black;
+}
+</style>
+</html>

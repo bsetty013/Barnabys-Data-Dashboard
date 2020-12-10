@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background-color:BlanchedAlmond ;">
+	<h1>Enter a beer recipe to see last years projection for it:</h1>
+</body>
+
+<form method = "GET" action = /projection_output>
+<label>Choose from one of the following recipes: </label>
+<select name = recipes method = "GET">
+	{% for recipe in recipes %}
+	<option value = "{{recipe}}" SELECTED>{{recipe}}</option>"
+	{% endfor %}
+</select>
+
+
+<input type = "submit" value = "submit">
+</form>
+
+<form action = "/" method = "get">
+	<input type = "submit" class = "button" value = "Home" name = Home>
+</form>
+	
+</html>

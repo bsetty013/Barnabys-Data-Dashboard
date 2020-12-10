@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body style="background-color:BlanchedAlmond ;">
+	<h1>Here is the Recommended Beer Recipe: </h1>
+	{% for growth_rate in display_rates %}
+	<h3>{{growth_rate}}</h3></br>
+	{% endfor %}
+	<h3>{{most_demand_display}}</h3>
+
+
+</body>
+
+<form action = "/make_third_recommendation" method = "get">
+	<input type = "submit" class = "button" value = "Next" name = Next>
+</form>
+
+
+
+
+</html>

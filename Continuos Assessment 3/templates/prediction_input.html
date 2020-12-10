@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background-color:BlanchedAlmond ;">
+	<h1>Here you can make a prediction:</h1>
+</body>
+
+<form method = "GET" action = /prediction_output>
+<label>Choose from one of the following recipes: </label>
+<select name = recipes method = "GET">
+	{% for recipe in recipes %}
+	<option value = "{{recipe}}" SELECTED>{{recipe}}</option>"
+	{% endfor %}
+</select>
+
+<label>Choose from one of the following months: </label>	
+<select name = months method = "GET">
+	{% for month in months %}
+	<option value = "{{month}}" SELECTED>{{month}}</option>"
+	{% endfor %}
+</select>
+
+	<input type = "submit" value = "submit">
+</form>
+
+<form action = "/" method = "get">
+	<input type = "submit" class = "button" value = "Home" name = Home>
+</form>
+	
+</html>

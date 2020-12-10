@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background-color:BlanchedAlmond ;">
+	<h1>In the tank there is: </h1>
+	{% for detail in output_details %}
+	<label>{{detail}}</label></br>
+	{% endfor %}
+
+</body>
+
+<form action = "/" method = "get">
+	<input type = "submit" class = "button" value = "Home" name = Home>
+</form>
+
+
+</html>

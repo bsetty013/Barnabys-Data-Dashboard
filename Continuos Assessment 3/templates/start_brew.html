@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background-color:BlanchedAlmond ;">
+	<h1>Start Brew</h1>
+
+</body>
+
+<form action = "/brew_process" method = "get">
+	<label>Choose the recipe of a batch you would like to start for fermentation: </label>
+	<select name = recipe_ask method = "GET">
+		{% for recipe in recipes %}
+		<option value = "{{recipe}}" SELECTED>{{recipe}}</option>"
+		{% endfor %}
+	</select>
+	<label>Choose the tank you would like to start fermentation in: </label>
+	<select name = tank_question method = "GET">
+		{% for tank in tank_options %}
+		<option value = "{{tank}}" SELECTED>{{tank}}</option>"
+		{% endfor %}
+	</select>
+	<input type = "submit" value = "Start Brewing">
+</form>
+
+<form action = "/" method = "get">
+	<input type = "submit" class = "button" value = "Home" name = Home>
+</form>
+</html>

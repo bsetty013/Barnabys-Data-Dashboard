@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background-color:BlanchedAlmond ;">
+	<h1>Here you can view all the tanks where batches are being brewed: </h1>
+
+</body>
+
+<form action = "/viewtank_output" methods = "get">
+<label>Choose from one of the following tanks: </label>	
+<select name = tank_ask method = "GET">
+	{% for tank in tanks %}
+	<option value = "{{tank}}" SELECTED>{{tank}}</option>"
+	{% endfor %}
+</select>
+
+	<input type = "submit" value = "submit">
+</form>
+
+<form action = "/" method = "get">
+	<input type = "submit" class = "button" value = "Home" name = Home>
+</form>
+
+
+</html>
